@@ -10,7 +10,6 @@ export default NextAuth({
         password: { label: "Senha", type: "password" }
       },
       async authorize(credentials) {
-        // Exemplo de login funcional. Para escalar, integre com Prisma/Supabase/Firebase.
         if (credentials.email === "admin@admin.com" && credentials.password === "admin") {
           return { id: 1, name: "Usuário Admin", email: "admin@admin.com" };
         }
@@ -18,6 +17,6 @@ export default NextAuth({
       }
     })
   ],
-  secret: "chave-secreta-ambiente-dev",
+  secret: process.env.NEXTAUTH_SECRET || "chave-secreta-ambiente-dev",
   session: { strategy: 'jwt' }
 });

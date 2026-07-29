@@ -53,9 +53,7 @@ export default function Dashboard({ user }) {
           <div>
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-4">
               <h2 className="text-xl font-semibold text-gray-800">Transações Identificadas ({transacoes.length})</h2>
-              
               <button onClick={exportarCSV} className="bg-green-600 hover:bg-green-700 transition text-white px-4 py-2 rounded-lg text-sm font-medium shadow-sm flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M15 18a3 3 0 1 0-6 0"/><path d="M15 18H3"/><path d="M9 18v-3a3 3 0 0 1 3-3h3"/><path d="M21 12v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9l5 5z"/></svg>
                 Exportar para Planilha (CSV)
               </button>
             </div>
